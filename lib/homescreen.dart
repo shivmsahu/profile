@@ -24,25 +24,23 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
         body: ListView(children: [
-          SizedBox(
-            height: 20.0,
-          ),
-          Center(
-            child: Text(
-              'Hi there!',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.grey,
-                letterSpacing: 0,
-                fontFamily: 'indieflower',
-                fontWeight: FontWeight.bold,
-                fontSize: 40.0,
+          Container(
+            margin: EdgeInsets.fromLTRB(15, 40, 15, 40),
+            child: Center(
+              child: Text(
+                'Hi there!',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.grey,
+                  letterSpacing: 0,
+                  fontFamily: 'indieflower',
+                  fontWeight: FontWeight.bold,
+                  fontSize: 40.0,
+                ),
               ),
             ),
           ),
-          SizedBox(
-            height: 40.0,
-          ),
+
           Center(
             child: CircleAvatar(
               radius: 160.0,
@@ -53,10 +51,9 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
-            height: 40.0,
-          ),
-          Padding(
+
+          Container(
+            margin: EdgeInsets.fromLTRB(15, 20, 15, 20),
             padding: const EdgeInsets.all(20.0),
             child: Row(
               children: [
@@ -110,11 +107,9 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
-            height: 40.0,
-          ),
+
           Container(
-            padding: EdgeInsets.fromLTRB(20, 20, 20, 5),
+            padding: EdgeInsets.fromLTRB(20, 40, 20, 5),
             child: Text(
               'Technical Skills:',
               style: TextStyle(
