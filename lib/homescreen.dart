@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'contact.dart';
+import 'contactpc.dart';
+import 'dart:io' show Platform;
 
 class HomeScreen extends StatelessWidget {
-  List<String> education = [
+  final List<String> education = [
     'Bachelor of Computer Applications:\nSeth Jai Parkash Mukand Lal Institute of Engineering & Technology\n2020',
     '12th:\n New Happy Sr. Sec. School\n2017',
     '10th:\n New Happy Sr. Sec. School\n2015'
@@ -195,8 +197,22 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 onTap: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => ContactScreen()));
+                  bool kisweb;
+                  try {
+                    if (Platform.isAndroid || Platform.isIOS) {
+                      kisweb = false;
+                    } else {
+                      kisweb = true;
+                    }
+                  } catch (e) {
+                    kisweb = true;
+                  }
+                  if (!kisweb)
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => ContactScreen()));
+                  else
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => ContactScreenPC()));
                 },
               ),
             ),

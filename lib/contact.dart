@@ -12,7 +12,7 @@ class ContactScreen extends StatelessWidget {
   }
 
   _mail() async {
-    const url = 'mailto:shivamsahu.ss27@gmail.com';
+    const url = 'mailto:shivam.sahu@unthinkable.co';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
